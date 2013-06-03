@@ -7,7 +7,7 @@
 //
 
 #import "AVFAppDelegate.h"
-
+#import <AVFoundation/AVFoundation.h>
 #import "AVFViewController.h"
 
 @implementation AVFAppDelegate
@@ -21,6 +21,12 @@
     // Override point for customization after application launch.
     self.viewController = [[AVFViewController alloc] initWithNibName:@"AVFViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
+    
+    NSError *setCategoryErr = nil;
+    NSError *activationErr  = nil;
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error:&setCategoryErr];
+    [[AVAudioSession sharedInstance] setActive:YES error:&activationErr];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
