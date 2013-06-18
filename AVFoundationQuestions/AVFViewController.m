@@ -25,7 +25,7 @@ void *kDidFailKVO               = &kDidFailKVO;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self playURL:[NSURL URLWithString:@"http://radionetworknz-ice.streamguys.com/zmonline"]];
+    [self playURL:[NSURL URLWithString:@"http://radionetworknz.streamguys.com/zmradio-fm/zmradio-fm.sdp/playlist.m3u8"]];
 }
 
 - (void)viewDidUnload
