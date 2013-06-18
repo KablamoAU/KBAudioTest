@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AVFViewController : UIViewController
-
+{
+    UIBackgroundTaskIdentifier task;
+}
 @end
